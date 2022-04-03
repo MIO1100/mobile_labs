@@ -1,0 +1,12 @@
+[
+          {
+          "id": 1,
+          "city": "Barnaul",
+          "temperature": 0
+      },
+          {
+          "id": 2,
+          "city": "Novosibirsk",
+          "temperature": 5
+      }
+]

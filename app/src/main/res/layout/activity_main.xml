@@ -7,34 +7,66 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="226dp"
-        android:onClick="sendData"
-        android:text="@string/button"
+        android:layout_marginTop="16dp"
+        android:text="@string/place"
+        app:layout_constraintStart_toStartOf="@+id/btn_sec"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="7dp"
+        android:text="@string/sec"
+        app:layout_constraintEnd_toStartOf="@+id/btn_stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_place" />
+
+    <Button
+        android:id="@+id/btn_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weather"
+        app:layout_constraintStart_toStartOf="@+id/btn_sec"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sec" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop"
+        app:layout_constraintStart_toEndOf="@+id/btn_sec"
+        app:layout_constraintTop_toBottomOf="@+id/btn_place" />
+
+    <TextView
+        android:id="@+id/text_out"
+        android:layout_width="373dp"
+        android:layout_height="284dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/out"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="0dp"
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="3dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/city"
+        app:layout_constraintStart_toEndOf="@+id/btn_weather"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sec" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint"
-            android:text="@string/qwe"
-            android:textColor="#616161"
-            android:textColorHint="#757575" />
-    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
